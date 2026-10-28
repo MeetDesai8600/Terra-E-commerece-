@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Shop · Terra</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .layout {
+            display: grid;
+            grid-template-columns: 230px 1fr;
+            gap: 32px
+        }
+
+        .filters li {
+            margin-bottom: 10px
+        }
+
+        .filters label {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            color: var(--ink);
+            font-size: 14px;
+            margin: 0
+        }
+
+        .filters input {
+            width: auto
+        }
+
+        .filters h4 {
+            margin: 22px 0 10px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            color: var(--faint)
+        }
+
+        .bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px
+        }
+
+        .bar select {
+            width: auto
+        }
+
+        .grid.three {
+            grid-template-columns: repeat(3, 1fr)
+        }
+
+        @media(max-width:860px) {
+            .layout {
+                grid-template-columns: 1fr
+            }
+
+            .grid.three {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrap"><a class="logo" href="home.html">Terra</a>
+            <nav class="nav"><a href="home.html">Home</a><a class="on" href="shop.html">Shop</a><a
+                    href="product.html">Featured</a><a href="invoice.html">Orders</a></nav>
+            <a class="cart-link" href="cart.html">Cart (3)</a>
+        </div>
+    </header>
+    <main class="wrap">
+        <div class="crumb"><a href="home.html">Home</a> / Shop</div>
+        <div class="layout">
+            <aside class="filters panel">
+                <h3>Filters</h3>
+                <h4>Category</h4>
+                <ul>
+                    <li><label><input type="checkbox" checked>Indoor plants</label></li>
+                    <li><label><input type="checkbox">Succulents</label></li>
+                    <li><label><input type="checkbox">Planters</label></li>
+                    <li><label><input type="checkbox">Care kits</label></li>
+                </ul>
+                <h4>Light</h4>
+                <ul>
+                    <li><label><input type="checkbox">Low light</label></li>
+                    <li><label><input type="checkbox">Bright indirect</label></li>
+                </ul>
+                <h4>Max price</h4><input type="range" min="200" max="3000" value="1500" style="padding:0">
+            </aside>
+            <section>
+                <div class="bar">
+                    <h2>All products <small style="font-family:'DM Sans';color:var(--faint);font-size:14px">(8)</small>
+                    </h2><select>
+                        <option>Sort: Featured</option>
+                        <option>Price: low to high</option>
+                        <option>Price: high to low</option>
+                    </select>
+                </div>
+                <div class="grid three"><a class="card" href="product.html">
+                        <div class="media"><span class="tag">New</span>🪴</div>
+                        <div class="card-body"><small>Plants · Indoor</small>
+                            <h3>Monstera Deliciosa</h3><span class="price">₹899</span>
+                        </div>
+                    </a>
+                    <a class="card" href="product.html">
+                        <div class="media"><span class="tag sale">-15%</span>🌵</div>
+                        <div class="card-body"><small>Plants · Low light</small>
+                            <h3>Cactus Trio Set</h3><span class="price">₹549</span><span class="old">₹649</span>
+                        </div>
+                    </a>
+                    <a class="card" href="product.html">
+                        <div class="media">🏺</div>
+                        <div class="card-body"><small>Planters · Ceramic</small>
+                            <h3>Sand Ceramic Pot</h3><span class="price">₹749</span>
+                        </div>
+                    </a>
+                    <a class="card" href="product.html">
+                        <div class="media">🌿</div>
+                        <div class="card-body"><small>Plants · Hanging</small>
+                            <h3>Golden Pothos</h3><span class="price">₹399</span>
+                        </div>
+                    </a><a class="card" href="product.html">
+                        <div class="media"><span class="tag">New</span>🪴</div>
+                        <div class="card-body"><small>Plants · Indoor</small>
+                            <h3>Monstera Deliciosa</h3><span class="price">₹899</span>
+                        </div>
+                    </a>
+                    <a class="card" href="product.html">
+                        <div class="media"><span class="tag sale">-15%</span>🌵</div>
+                        <div class="card-body"><small>Plants · Low light</small>
+                            <h3>Cactus Trio Set</h3><span class="price">₹549</span><span class="old">₹649</span>
+                        </div>
+                    </a>
+                    <a class="card" href="product.html">
+                        <div class="media">🏺</div>
+                        <div class="card-body"><small>Planters · Ceramic</small>
+                            <h3>Sand Ceramic Pot</h3><span class="price">₹749</span>
+                        </div>
+                    </a>
+                    <a class="card" href="product.html">
+                        <div class="media">🌿</div>
+                        <div class="card-body"><small>Plants · Hanging</small>
+                            <h3>Golden Pothos</h3><span class="price">₹399</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="foot">
+                <div>
+                    <div class="logo">Terra</div>
+                    <p>Plants and calm home goods, delivered with care.</p>
+                </div>
+                <div>
+                    <h4>Shop</h4>
+                    <ul>
+                        <li>Plants</li>
+                        <li>Planters</li>
+                        <li>Care kits</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Help</h4>
+                    <ul>
+                        <li>Shipping</li>
+                        <li>Returns</li>
+                        <li>Plant care</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li>About</li>
+                        <li>Journal</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copy">© 2026 Terra Living. All rights reserved.</div>
+        </div>
+    </footer>
+</body>
+
+</html>

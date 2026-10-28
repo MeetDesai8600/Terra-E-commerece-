@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Invoice · Terra</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .inv {
+            max-width: 760px;
+            margin: 0 auto
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 28px
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0
+        }
+
+        th {
+            text-align: left;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            color: var(--faint);
+            padding: 10px 0;
+            border-bottom: 1px solid var(--line)
+        }
+
+        td {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--line)
+        }
+
+        td:last-child,
+        th:last-child {
+            text-align: right
+        }
+
+        .tot {
+            margin-left: auto;
+            width: 260px
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrap"><a class="logo" href="home.html">Terra</a>
+            <nav class="nav"><a href="home.html">Home</a><a href="shop.html">Shop</a><a
+                    href="product.html">Featured</a><a class="on" href="invoice.html">Orders</a></nav>
+            <a class="cart-link" href="cart.html">Cart (3)</a>
+        </div>
+    </header>
+    <main class="wrap">
+        <div class="crumb"><a href="home.html">Home</a> / Invoice</div>
+        <div class="inv panel">
+            <div class="top">
+                <div>
+                    <div class="logo">Terra</div><small>Terra Living Pvt Ltd, Ahmedabad</small>
+                </div>
+                <div style="text-align:right">
+                    <h2>Invoice</h2><small>#TR-20261028 · 28 Oct 2026</small><br><span class="tag">Paid</span>
+                </div>
+            </div>
+            <p><b>Billed to</b><br>Customer Name<br>12 Garden Road, Ahmedabad 380001</p>
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Monstera Deliciosa (6 inch)</td>
+                    <td>1</td>
+                    <td>₹899</td>
+                </tr>
+                <tr>
+                    <td>Sand Ceramic Pot</td>
+                    <td>1</td>
+                    <td>₹749</td>
+                </tr>
+                <tr>
+                    <td>Cactus Trio Set</td>
+                    <td>1</td>
+                    <td>₹549</td>
+                </tr>
+            </table>
+            <div class="tot">
+                <div class="sum-line"><span>Subtotal</span><span>₹2,197</span></div>
+                <div class="sum-line"><span>GST (12%)</span><span>₹264</span></div>
+                <div class="sum-line total"><span>Total</span><span>₹2,461</span></div>
+            </div>
+            <p class="no-print" style="margin-top:24px"><a class="btn btn-line" href="#"
+                    onclick="window.print();return false">Print invoice</a> <a class="btn btn-main"
+                    href="home.html">Continue shopping</a></p>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="foot">
+                <div>
+                    <div class="logo">Terra</div>
+                    <p>Plants and calm home goods, delivered with care.</p>
+                </div>
+                <div>
+                    <h4>Shop</h4>
+                    <ul>
+                        <li>Plants</li>
+                        <li>Planters</li>
+                        <li>Care kits</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Help</h4>
+                    <ul>
+                        <li>Shipping</li>
+                        <li>Returns</li>
+                        <li>Plant care</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li>About</li>
+                        <li>Journal</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copy">© 2026 Terra Living. All rights reserved.</div>
+        </div>
+    </footer>
+</body>
+
+</html>

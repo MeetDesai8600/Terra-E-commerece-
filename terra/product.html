@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Product · Terra</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .pd {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px
+        }
+
+        .gal .big {
+            aspect-ratio: 1;
+            background: var(--accent-soft);
+            border-radius: 20px;
+            display: grid;
+            place-items: center;
+            font-size: 150px
+        }
+
+        .thumbs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-top: 12px
+        }
+
+        .thumbs div {
+            aspect-ratio: 1;
+            background: var(--accent-soft);
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            font-size: 30px;
+            border: 2px solid transparent
+        }
+
+        .thumbs div:first-child {
+            border-color: var(--accent)
+        }
+
+        .info h1 {
+            font-size: 38px;
+            margin: 10px 0
+        }
+
+        .info .price {
+            font-size: 26px
+        }
+
+        .info p {
+            color: var(--soft)
+        }
+
+        .opts {
+            display: flex;
+            gap: 10px;
+            margin: 8px 0 22px
+        }
+
+        .opts span {
+            padding: 8px 16px;
+            border: 1px solid var(--line);
+            border-radius: 99px;
+            font-size: 14px;
+            background: #fff
+        }
+
+        .opts .sel {
+            border-color: var(--accent);
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-weight: 700
+        }
+
+        .buy {
+            display: grid;
+            grid-template-columns: 90px 1fr;
+            gap: 12px
+        }
+
+        .specs {
+            margin-top: 28px;
+            border-top: 1px solid var(--line)
+        }
+
+        .specs div {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--line);
+            font-size: 14px
+        }
+
+        .specs span {
+            color: var(--soft)
+        }
+
+        @media(max-width:860px) {
+            .pd {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrap"><a class="logo" href="home.html">Terra</a>
+            <nav class="nav"><a href="home.html">Home</a><a href="shop.html">Shop</a><a class="on"
+                    href="product.html">Featured</a><a href="invoice.html">Orders</a></nav>
+            <a class="cart-link" href="cart.html">Cart (3)</a>
+        </div>
+    </header>
+    <main class="wrap">
+        <div class="crumb"><a href="home.html">Home</a> / <a href="shop.html">Shop</a> / Monstera Deliciosa</div>
+        <div class="pd">
+            <div class="gal">
+                <div class="big">🪴</div>
+                <div class="thumbs">
+                    <div>🪴</div>
+                    <div>🌿</div>
+                    <div>🏺</div>
+                    <div>☀️</div>
+                </div>
+            </div>
+            <div class="info"><span class="tag">In stock</span>
+                <h1>Monstera Deliciosa</h1>
+                <div>★★★★★ <small>4.9 (214 reviews)</small></div>
+                <p style="margin:14px 0"><span class="price">₹899</span><span class="old">₹1,049</span></p>
+                <p>A classic statement plant with split leaves. Thrives in bright, indirect light and forgives the
+                    occasional missed watering.</p>
+                <label>Pot size</label>
+                <div class="opts"><span>4 inch</span><span class="sel">6 inch</span><span>8 inch</span></div>
+                <div class="buy"><input type="number" value="1" min="1"><a class="btn btn-main" href="cart.html">Add to
+                        cart</a></div>
+                <div class="specs">
+                    <div><span>Light</span>Bright indirect</div>
+                    <div><span>Watering</span>Every 7–10 days</div>
+                    <div><span>Pet safe</span>No</div>
+                    <div><span>Delivery</span>3–5 days</div>
+                </div>
+            </div>
+        </div>
+        <div class="sec-head">
+            <h2>You may also like</h2>
+        </div>
+        <div class="grid"><a class="card" href="product.html">
+                <div class="media"><span class="tag">New</span>🪴</div>
+                <div class="card-body"><small>Plants · Indoor</small>
+                    <h3>Monstera Deliciosa</h3><span class="price">₹899</span>
+                </div>
+            </a>
+            <a class="card" href="product.html">
+                <div class="media"><span class="tag sale">-15%</span>🌵</div>
+                <div class="card-body"><small>Plants · Low light</small>
+                    <h3>Cactus Trio Set</h3><span class="price">₹549</span><span class="old">₹649</span>
+                </div>
+            </a>
+            <a class="card" href="product.html">
+                <div class="media">🏺</div>
+                <div class="card-body"><small>Planters · Ceramic</small>
+                    <h3>Sand Ceramic Pot</h3><span class="price">₹749</span>
+                </div>
+            </a>
+            <a class="card" href="product.html">
+                <div class="media">🌿</div>
+                <div class="card-body"><small>Plants · Hanging</small>
+                    <h3>Golden Pothos</h3><span class="price">₹399</span>
+                </div>
+            </a>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="foot">
+                <div>
+                    <div class="logo">Terra</div>
+                    <p>Plants and calm home goods, delivered with care.</p>
+                </div>
+                <div>
+                    <h4>Shop</h4>
+                    <ul>
+                        <li>Plants</li>
+                        <li>Planters</li>
+                        <li>Care kits</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Help</h4>
+                    <ul>
+                        <li>Shipping</li>
+                        <li>Returns</li>
+                        <li>Plant care</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li>About</li>
+                        <li>Journal</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copy">© 2026 Terra Living. All rights reserved.</div>
+        </div>
+    </footer>
+</body>
+
+</html>
